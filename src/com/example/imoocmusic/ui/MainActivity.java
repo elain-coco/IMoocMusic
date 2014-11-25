@@ -176,7 +176,7 @@ public class MainActivity extends Activity {
 		// 初始化已选择文字
 		mBtnSelectWords = initWordSelect();
 
-		LayoutParams params = new LayoutParams(140, 140);
+		LayoutParams params = new LayoutParams(90, 90);
 		for (int i = 0; i < mBtnSelectWords.size(); i++) {
 			mViewWordsContainer.addView(mBtnSelectWords.get(i).mViewButton,
 					params);

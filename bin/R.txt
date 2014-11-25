@@ -7,6 +7,7 @@ int anim abc_slide_out_top 0x7f040005
 int anim rotate 0x7f040006
 int anim rotate_45 0x7f040007
 int anim rotate_d_45 0x7f040008
+int anim scale 0x7f040009
 int attr actionBarDivider 0x7f01000b
 int attr actionBarItemBackground 0x7f01000c
 int attr actionBarSize 0x7f01000a

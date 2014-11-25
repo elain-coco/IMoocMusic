@@ -18,6 +18,7 @@ public final class R {
         public static final int rotate=0x7f040006;
         public static final int rotate_45=0x7f040007;
         public static final int rotate_d_45=0x7f040008;
+        public static final int scale=0x7f040009;
     }
     public static final class attr {
         /**  Custom divider drawable to use for elements in the action bar. 
