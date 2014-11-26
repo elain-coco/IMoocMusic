@@ -1,7 +1,11 @@
 package com.example.imoocmusic.data;
 
 public class Const {
+	public static final int INDEX_FILE_NAME = 0;
+	public static final int INDEX_SONG_NAME = 1;
 	
+	
+	//歌曲信息
 	public static final String SONG_INFO[][]={
 		{"__00000.mp3","不要说话"},
 		{"__00001.mp3","感激"},

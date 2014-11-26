@@ -17,12 +17,14 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 import android.widget.LinearLayout.LayoutParams;
 
+import com.example.imoocmusic.data.Const;
 import com.example.imoocmusic.model.IWordButtonClickListener;
+import com.example.imoocmusic.model.Song;
 import com.example.imoocmusic.model.WorkButton;
 import com.example.imoocmusic.myui.MyGridView;
 import com.example.imoocmusic.util.Util;
 
-public class MainActivity extends Activity implements IWordButtonClickListener{
+public class MainActivity extends Activity implements IWordButtonClickListener {
 
 	// 唱片相关动画
 	private Animation mPanAnim;
@@ -49,6 +51,12 @@ public class MainActivity extends Activity implements IWordButtonClickListener{
 	// 已选择文字框的UI容器
 	private LinearLayout mViewWordsContainer;
 
+	// 当前的歌曲
+	private Song mCurrentSong;
+
+	// 当前关的索引
+	private int mCurrentStageIndex = -1;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -57,7 +65,7 @@ public class MainActivity extends Activity implements IWordButtonClickListener{
 		mViewPanBar = (ImageView) findViewById(R.id.imageView2);
 
 		mMyGridView = (MyGridView) findViewById(R.id.gridview);
-		//注册监听事件
+		// 注册监听事件
 		mMyGridView.registOnWordButtonClick(this);
 		mViewWordsContainer = (LinearLayout) findViewById(R.id.word_select_container);
 		// 初始化动画
@@ -173,9 +181,25 @@ public class MainActivity extends Activity implements IWordButtonClickListener{
 	}
 
 	/**
+	 * 读取当前关的歌曲的信息
+	 * @param stageIndex 
+	 * @return
+	 */
+	private Song loadStageSongInfo(int stageIndex){
+		Song song = new Song();
+		String[] stage = Const.SONG_INFO[stageIndex];
+		song.setSongFileName(stage[Const.INDEX_FILE_NAME]);
+		song.setSongName(stage[Const.INDEX_SONG_NAME]);
+		return song;
+	}
+	
+	/**
 	 * 初始化当前数据
 	 */
 	private void initCurrentStageData() {
+		//读取当前歌曲信息
+		mCurrentSong=loadStageSongInfo(++mCurrentStageIndex);
+		
 		// 初始化已选择文字
 		mBtnSelectWords = initWordSelect();
 
@@ -215,7 +239,7 @@ public class MainActivity extends Activity implements IWordButtonClickListener{
 	 */
 	private ArrayList<WorkButton> initWordSelect() {
 		ArrayList<WorkButton> data = new ArrayList<WorkButton>();
-		for (int i = 0; i < 4; i++) {
+		for (int i = 0; i < mCurrentSong.getNameLength(); i++) {
 			View view = Util.getView(MainActivity.this,
 					R.layout.self_ui_gridview_item);
 			WorkButton holder = new WorkButton();
