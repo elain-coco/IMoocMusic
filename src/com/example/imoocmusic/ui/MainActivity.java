@@ -14,13 +14,15 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 import android.widget.LinearLayout.LayoutParams;
 
+import com.example.imoocmusic.model.IWordButtonClickListener;
 import com.example.imoocmusic.model.WorkButton;
 import com.example.imoocmusic.myui.MyGridView;
 import com.example.imoocmusic.util.Util;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements IWordButtonClickListener{
 
 	// 唱片相关动画
 	private Animation mPanAnim;
@@ -55,7 +57,8 @@ public class MainActivity extends Activity {
 		mViewPanBar = (ImageView) findViewById(R.id.imageView2);
 
 		mMyGridView = (MyGridView) findViewById(R.id.gridview);
-
+		//注册监听事件
+		mMyGridView.registOnWordButtonClick(this);
 		mViewWordsContainer = (LinearLayout) findViewById(R.id.word_select_container);
 		// 初始化动画
 
@@ -220,12 +223,18 @@ public class MainActivity extends Activity {
 			holder.mViewButton.setTextColor(Color.WHITE);
 			holder.mViewButton.setText("");
 			holder.mIsVisable = false;
-			holder.mViewButton.setBackgroundResource(R.drawable.game_word0);
+			holder.mViewButton.setBackgroundResource(R.drawable.game_wordblank);
 
 			data.add(holder);
 		}
 		return data;
 
+	}
+
+	@Override
+	public void onWordButtonClick(WorkButton wordButton) {
+		// TODO Auto-generated method stub
+		Toast.makeText(this, "哈哈", Toast.LENGTH_LONG).show();
 	}
 
 }

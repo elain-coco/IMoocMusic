@@ -12,8 +12,8 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.GridView;
 
+import com.example.imoocmusic.model.IWordButtonClickListener;
 import com.example.imoocmusic.model.WorkButton;
-import com.example.imoocmusic.ui.MainActivity;
 import com.example.imoocmusic.ui.R;
 import com.example.imoocmusic.util.Util;
 
@@ -25,8 +25,10 @@ public class MyGridView extends GridView {
 	private MyGridAdapter mAdapter;
 
 	private Context mContext;
+	
 	private Animation mScaleAnimation;
-
+	
+	private IWordButtonClickListener mWordButtonClickListener;
 	public MyGridView(Context context, AttributeSet attributeSet) {
 		super(context, attributeSet);
 
@@ -57,7 +59,7 @@ public class MyGridView extends GridView {
 		}
 
 		public View getView(int pos, View v, ViewGroup p) {
-			WorkButton holder;
+			final WorkButton holder;
 
 			if (v == null) {
 				v = Util.getView(mContext, R.layout.self_ui_gridview_item);
@@ -70,7 +72,15 @@ public class MyGridView extends GridView {
 				mScaleAnimation.setStartOffset(pos * 100);
 				holder.mIndex = pos;
 				holder.mViewButton = (Button) v.findViewById(R.id.item_btn);
-
+				holder.mViewButton.setOnClickListener(new View.OnClickListener() {
+					
+					@Override
+					public void onClick(View v) {
+						// TODO Auto-generated method stub
+						mWordButtonClickListener.onWordButtonClick(holder);
+					}
+				});
+				
 				v.setTag(holder);
 			} else {
 				holder = (WorkButton) v.getTag();
@@ -82,5 +92,13 @@ public class MyGridView extends GridView {
 
 			return v;
 		}
+	}
+	
+	/**
+	 * ×¢²á¼àÌý½Ó¿Ú
+	 * @param listener
+	 */
+	public void registOnWordButtonClick(IWordButtonClickListener listener){
+		mWordButtonClickListener = listener;
 	}
 }

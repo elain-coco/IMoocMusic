@@ -309,7 +309,8 @@ int drawable pass_share 0x7f0200a1
 int drawable pass_share_sel 0x7f0200a2
 int drawable play_button_icon 0x7f0200a3
 int drawable splash_ht 0x7f0200a4
-int drawable work_button_icon 0x7f0200a5
+int drawable word_button_icon 0x7f0200a5
+int drawable work_button_icon 0x7f0200a6
 int id action_bar 0x7f05001a
 int id action_bar_activity_content 0x7f050015
 int id action_bar_container 0x7f050019
