@@ -9,6 +9,7 @@ import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.provider.UserDictionary.Words;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
@@ -227,9 +228,9 @@ public class MainActivity extends Activity implements IWordButtonClickListener {
 	 */
 	private ArrayList<WorkButton> initAllWord() {
 		ArrayList<WorkButton> data = new ArrayList<WorkButton>();
-		
+
 		// 获得所有待选文字
-		String [] words =generateWords();
+		String[] words = generateWords();
 		for (int i = 0; i < MyGridView.COUNTS_WORDS; i++) {
 			WorkButton button = new WorkButton();
 			button.mWordString = words[i];
@@ -248,17 +249,23 @@ public class MainActivity extends Activity implements IWordButtonClickListener {
 		for (int i = 0; i < mCurrentSong.getNameLength(); i++) {
 			View view = Util.getView(MainActivity.this,
 					R.layout.self_ui_gridview_item);
-			WorkButton holder = new WorkButton();
+			final WorkButton holder = new WorkButton();
 			holder.mViewButton = (Button) view.findViewById(R.id.item_btn);
 			holder.mViewButton.setTextColor(Color.WHITE);
 			holder.mViewButton.setText("");
 			holder.mIsVisable = false;
 			holder.mViewButton.setBackgroundResource(R.drawable.game_wordblank);
-
+			// 设置已选择框的点击事件
+			holder.mViewButton.setOnClickListener(new View.OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					// TODO Auto-generated method stub
+					clearTheAnswer(holder);
+				}
+			});
 			data.add(holder);
 		}
 		return data;
-
 	}
 
 	/**
@@ -267,6 +274,7 @@ public class MainActivity extends Activity implements IWordButtonClickListener {
 	 * @return
 	 */
 	private String[] generateWords() {
+		Random random = new Random();
 		String[] words = new String[MyGridView.COUNTS_WORDS];
 
 		// 存入歌名
@@ -276,6 +284,16 @@ public class MainActivity extends Activity implements IWordButtonClickListener {
 		// 获取随机文字并存入数组
 		for (int i = mCurrentSong.getNameLength(); i < MyGridView.COUNTS_WORDS; i++) {
 			words[i] = getRandomChar() + "";
+		}
+
+		// 打乱文字顺序：首先从所有元素中随机选取一个元素与第一个元素交换，然后再在第二个之后
+		// 随机选择一个元素与第二个元素交换，直到最后一个元素，这样每个元素被交换的概率都为1/n
+
+		for (int i = MyGridView.COUNTS_WORDS - 1; i >= 0; i--) {
+			int index = random.nextInt(i + 1);
+			String buf = words[index];
+			words[index] = words[i];
+			words[i] = buf;
 		}
 		return words;
 	}
@@ -308,10 +326,61 @@ public class MainActivity extends Activity implements IWordButtonClickListener {
 		return str.charAt(0);
 	}
 
+	/**
+	 * 清除已选择框的答案
+	 * 
+	 * @param button
+	 */
+	private void clearTheAnswer(WorkButton button) {
+		button.mViewButton.setText("");
+		button.mWordString = "";
+		button.mIsVisable = false;
+
+		// 设置待选框的可见性
+		setButtonVisiable(mAllWords.get(button.mIndex), View.VISIBLE);
+	}
+
+	/**
+	 * 设置答案的内容以及可见性
+	 * 
+	 * @param workButton
+	 */
+	private void setSelectWord(WorkButton workButton) {
+		for (int i = 0; i < mBtnSelectWords.size(); i++) {// 依次遍历已选择文字
+			if (mBtnSelectWords.get(i).mWordString.length() == 0) {
+				// 设置答案文字框的内容以及可见性
+				mBtnSelectWords.get(i).mViewButton
+						.setText(workButton.mWordString);
+				mBtnSelectWords.get(i).mIsVisable = true;
+				mBtnSelectWords.get(i).mWordString = workButton.mWordString;
+				// 记录索引
+				mBtnSelectWords.get(i).mIndex = workButton.mIndex;
+				// Log……TODO
+
+				// 设置待选框的可见性
+				setButtonVisiable(workButton, View.INVISIBLE);
+				break;// 这一点非常重要，不然为空的待选框都会被选择
+			}
+		}
+	}
+
+	/**
+	 * 设置待选文字框是否可见
+	 * 
+	 * @param button
+	 * @param visibility
+	 */
+	private void setButtonVisiable(WorkButton button, int visibility) {
+		button.mViewButton.setVisibility(visibility);
+		button.mIsVisable = (visibility == View.VISIBLE) ? true : false;
+		// Log
+	}
+
 	@Override
 	public void onWordButtonClick(WorkButton wordButton) {
 		// TODO Auto-generated method stub
-		Toast.makeText(this, "哈哈", Toast.LENGTH_LONG).show();
+		// Toast.makeText(this, "哈哈", Toast.LENGTH_LONG).show();
+		setSelectWord(wordButton);
 	}
 
 }
