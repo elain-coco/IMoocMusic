@@ -1,10 +1,14 @@
 package com.example.imoocmusic.ui;
 
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.Random;
 
+import android.R.integer;
 import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.provider.UserDictionary.Words;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
@@ -182,24 +186,25 @@ public class MainActivity extends Activity implements IWordButtonClickListener {
 
 	/**
 	 * 读取当前关的歌曲的信息
-	 * @param stageIndex 
+	 * 
+	 * @param stageIndex
 	 * @return
 	 */
-	private Song loadStageSongInfo(int stageIndex){
+	private Song loadStageSongInfo(int stageIndex) {
 		Song song = new Song();
 		String[] stage = Const.SONG_INFO[stageIndex];
 		song.setSongFileName(stage[Const.INDEX_FILE_NAME]);
 		song.setSongName(stage[Const.INDEX_SONG_NAME]);
 		return song;
 	}
-	
+
 	/**
 	 * 初始化当前数据
 	 */
 	private void initCurrentStageData() {
-		//读取当前歌曲信息
-		mCurrentSong=loadStageSongInfo(++mCurrentStageIndex);
-		
+		// 读取当前歌曲信息
+		mCurrentSong = loadStageSongInfo(++mCurrentStageIndex);
+
 		// 初始化已选择文字
 		mBtnSelectWords = initWordSelect();
 
@@ -222,11 +227,12 @@ public class MainActivity extends Activity implements IWordButtonClickListener {
 	 */
 	private ArrayList<WorkButton> initAllWord() {
 		ArrayList<WorkButton> data = new ArrayList<WorkButton>();
+		
 		// 获得所有待选文字
-		// TODO
+		String [] words =generateWords();
 		for (int i = 0; i < MyGridView.COUNTS_WORDS; i++) {
 			WorkButton button = new WorkButton();
-			button.mWordString = "好";
+			button.mWordString = words[i];
 			data.add(button);
 		}
 		return data;
@@ -253,6 +259,53 @@ public class MainActivity extends Activity implements IWordButtonClickListener {
 		}
 		return data;
 
+	}
+
+	/**
+	 * 生成所有的待选文字
+	 * 
+	 * @return
+	 */
+	private String[] generateWords() {
+		String[] words = new String[MyGridView.COUNTS_WORDS];
+
+		// 存入歌名
+		for (int i = 0; i < mCurrentSong.getNameLength(); i++) {
+			words[i] = mCurrentSong.getNameCharacters()[i] + "";
+		}
+		// 获取随机文字并存入数组
+		for (int i = mCurrentSong.getNameLength(); i < MyGridView.COUNTS_WORDS; i++) {
+			words[i] = getRandomChar() + "";
+		}
+		return words;
+	}
+
+	/**
+	 * 随机生成字符
+	 * 
+	 * @return 随机的字符
+	 */
+	private char getRandomChar() {
+		String str = "";
+		int hightPos, lowPos;// 高位 低位
+		Random random = new Random();
+		hightPos = (176 + Math.abs(random.nextInt(39)));
+		// 这里的39是可以调的，01 - 94 即可，经测试39以后就为生僻字了
+		lowPos = (161 + Math.abs(random.nextInt(93)));
+
+		// 置于b这个byte数组中
+		byte[] b = new byte[2];
+		b[0] = (Integer.valueOf(hightPos)).byteValue();
+		b[1] = (Integer.valueOf(lowPos)).byteValue();
+
+		try {
+			str = new String(b, "GBK");
+
+		} catch (UnsupportedEncodingException e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return str.charAt(0);
 	}
 
 	@Override
