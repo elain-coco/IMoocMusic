@@ -3,7 +3,10 @@ package com.example.imoocmusic.ui;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
 
+import android.R.bool;
 import android.R.integer;
 import android.app.Activity;
 import android.graphics.Color;
@@ -27,10 +30,24 @@ import com.example.imoocmusic.model.IWordButtonClickListener;
 import com.example.imoocmusic.model.Song;
 import com.example.imoocmusic.model.WorkButton;
 import com.example.imoocmusic.myui.MyGridView;
+import com.example.imoocmusic.util.MyLog;
 import com.example.imoocmusic.util.Util;
 
 public class MainActivity extends Activity implements IWordButtonClickListener {
 
+	public final static String TAG = "MainActivity"; // Tag
+
+	/** 答案的状态---正确 */
+	public final static int STATUS_ANSWER_RIGHT = 1;
+
+	/** 答案的状态---错误 */
+	public final static int STATUS_ANSWER_WRONG = 2;
+
+	/** 答案的状态---不完整 */
+	public final static int STATUS_ANSWER_LACK = 3;
+
+	// 闪烁的次数
+	public final static int SPASH_TIMES = 6;
 	// 唱片相关动画
 	private Animation mPanAnim;
 	private LinearInterpolator mPanLin;// 线性的动画
@@ -355,8 +372,8 @@ public class MainActivity extends Activity implements IWordButtonClickListener {
 				mBtnSelectWords.get(i).mWordString = workButton.mWordString;
 				// 记录索引
 				mBtnSelectWords.get(i).mIndex = workButton.mIndex;
-				// Log……TODO
-
+				// Log
+				MyLog.d(TAG, mBtnSelectWords.get(i).mIndex + "");
 				// 设置待选框的可见性
 				setButtonVisiable(workButton, View.INVISIBLE);
 				break;// 这一点非常重要，不然为空的待选框都会被选择
@@ -373,14 +390,91 @@ public class MainActivity extends Activity implements IWordButtonClickListener {
 	private void setButtonVisiable(WorkButton button, int visibility) {
 		button.mViewButton.setVisibility(visibility);
 		button.mIsVisable = (visibility == View.VISIBLE) ? true : false;
-		// Log
+		// Log 打印按钮的可见性
+		MyLog.d(TAG, button.mIsVisable + "");
 	}
 
 	@Override
 	public void onWordButtonClick(WorkButton wordButton) {
 		// TODO Auto-generated method stub
-		// Toast.makeText(this, "哈哈", Toast.LENGTH_LONG).show();
 		setSelectWord(wordButton);
+		// 获得答案的状态
+		int checkResult = checkTheAnswer();
+		// 检查答案
+		switch (checkResult) {
+		case STATUS_ANSWER_RIGHT:
+			// 答案正确，获得奖励并且过关
+			break;
+		case STATUS_ANSWER_WRONG:
+			// 答案错误，闪烁文字并且提示错误
+			sparkTheWords();
+			break;
+		default:
+			// 答案缺失,文字颜色设置为白色
+			for (int i = 0; i < mBtnSelectWords.size(); i++) {
+				mBtnSelectWords.get(i).mViewButton
+						.setTextColor(Color.WHITE);
+			}
+			break;
+		}
+	}
+
+	/**
+	 * 检查答案
+	 * 
+	 * @return
+	 */
+	private int checkTheAnswer() {
+		// 先检查长度
+		for (int i = 0; i < mBtnSelectWords.size(); i++) {
+			// 入如果有空的说明说明答案不完整
+			if (mBtnSelectWords.get(i).mWordString.length() == 0) {
+				return STATUS_ANSWER_LACK;
+			}
+		}
+		// 答案完整则检查答案正确性
+		StringBuffer sBuffer = new StringBuffer();
+		for (int i = 0; i < mBtnSelectWords.size(); i++) {
+			sBuffer.append(mBtnSelectWords.get(i).mWordString);
+		}
+		return (sBuffer.toString().equals(mCurrentSong.getSongName())) ? STATUS_ANSWER_RIGHT
+				: STATUS_ANSWER_WRONG;
+	}
+
+	/**
+	 * 答案错误闪烁文字
+	 */
+	private void sparkTheWords() {
+		// 定时器相关
+		TimerTask task = new TimerTask() {
+			boolean mChange = false;
+			int mSpardTimes = 0;// 闪烁次数
+
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				runOnUiThread(new Runnable() {// 在UI线程里面实现
+
+					@Override
+					public void run() {
+						// TODO Auto-generated method stub
+						if (++mSpardTimes > SPASH_TIMES) {// 闪烁SPASH_TIMES次就退出,SPASH_TIMES为一个常量，初始化为6
+							return;
+						}
+						// 执行闪烁逻辑：交替显示红色和白色文字
+						for (int i = 0; i < mBtnSelectWords.size(); i++) {
+							mBtnSelectWords.get(i).mViewButton
+									.setTextColor(mChange ? Color.RED
+											: Color.WHITE);
+						}
+						mChange = !mChange;// 改变闪烁状态
+					}
+				});
+
+			}
+		};
+		Timer timer = new Timer();
+		timer.schedule(task, 1, 150);// 启动定时器
 	}
 
 }
