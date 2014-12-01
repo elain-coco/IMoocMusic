@@ -65,6 +65,8 @@ public class MainActivity extends Activity implements IWordButtonClickListener {
 	private ImageButton mBtnPlayStart;
 	private boolean isRunning = false;// 播放状态
 
+	// 过关界面
+	private View passView;
 	// 文字框容器
 	private ArrayList<WorkButton> mAllWords;
 	private ArrayList<WorkButton> mBtnSelectWords;
@@ -404,6 +406,9 @@ public class MainActivity extends Activity implements IWordButtonClickListener {
 		switch (checkResult) {
 		case STATUS_ANSWER_RIGHT:
 			// 答案正确，获得奖励并且过关
+//			Toast.makeText(MainActivity.this, "答案正确了啊，你怎么还不出现",
+//					Toast.LENGTH_LONG).show();
+			handlePassEvent();
 			break;
 		case STATUS_ANSWER_WRONG:
 			// 答案错误，闪烁文字并且提示错误
@@ -412,11 +417,18 @@ public class MainActivity extends Activity implements IWordButtonClickListener {
 		default:
 			// 答案缺失,文字颜色设置为白色
 			for (int i = 0; i < mBtnSelectWords.size(); i++) {
-				mBtnSelectWords.get(i).mViewButton
-						.setTextColor(Color.WHITE);
+				mBtnSelectWords.get(i).mViewButton.setTextColor(Color.WHITE);
 			}
 			break;
 		}
+	}
+
+	/**
+	 * 处理所有过关界面及事件
+	 */
+	private void handlePassEvent() {
+		passView = (LinearLayout) this.findViewById(R.id.pass_view);// 初始化
+		passView.setVisibility(View.VISIBLE);// 设置为可见
 	}
 
 	/**
