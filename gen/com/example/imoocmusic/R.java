@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.example.imoocmusic.ui;
+package com.example.imoocmusic;
 
 public final class R {
     public static final class anim {
@@ -1000,70 +1000,78 @@ containing a value of this type.
         public static final int allpass_text2=0x7f020065;
         public static final int allpass_wechat=0x7f020066;
         public static final int allpass_wechat_sel=0x7f020067;
-        public static final int back_button_icon=0x7f020068;
-        public static final int base_title_off=0x7f020069;
-        public static final int base_title_on=0x7f02006a;
-        public static final int bookstack_new=0x7f02006b;
-        public static final int buytip_bg=0x7f02006c;
-        public static final int buytip_cancel=0x7f02006d;
-        public static final int buytip_cancel_sel=0x7f02006e;
-        public static final int buytip_ok=0x7f02006f;
-        public static final int buytip_ok_sel=0x7f020070;
-        public static final int coin_button_icon=0x7f020071;
-        public static final int credit_content=0x7f020072;
-        public static final int delete_button_icon=0x7f020073;
-        public static final int game_buy1=0x7f020074;
-        public static final int game_buy1_sel=0x7f020075;
-        public static final int game_buy2=0x7f020076;
-        public static final int game_buy2_sel=0x7f020077;
-        public static final int game_center=0x7f020078;
-        public static final int game_coin=0x7f020079;
-        public static final int game_coin_icon=0x7f02007a;
-        public static final int game_coin_sel=0x7f02007b;
-        public static final int game_disc=0x7f02007c;
-        public static final int game_disc_light=0x7f02007d;
-        public static final int game_level=0x7f02007e;
-        public static final int game_level_title=0x7f02007f;
-        public static final int game_line=0x7f020080;
-        public static final int game_pin=0x7f020081;
-        public static final int game_share=0x7f020082;
-        public static final int game_share_sel=0x7f020083;
-        public static final int game_title=0x7f020084;
-        public static final int game_word0=0x7f020085;
-        public static final int game_word1=0x7f020086;
-        public static final int game_wordblank=0x7f020087;
-        public static final int game_wx_text=0x7f020088;
-        public static final int ic_launcher=0x7f020089;
-        public static final int index_about=0x7f02008a;
-        public static final int index_about_sel=0x7f02008b;
-        public static final int index_background=0x7f02008c;
-        public static final int index_bar=0x7f02008d;
-        public static final int index_between=0x7f02008e;
-        public static final int index_bottom_caitu=0x7f02008f;
-        public static final int index_bottom_caitu_sel=0x7f020090;
-        public static final int index_btn=0x7f020091;
-        public static final int index_btn_sel=0x7f020092;
-        public static final int index_dash=0x7f020093;
-        public static final int index_footer=0x7f020094;
-        public static final int index_guess=0x7f020095;
-        public static final int index_guess_sel=0x7f020096;
-        public static final int index_medal=0x7f020097;
-        public static final int index_pin=0x7f020098;
-        public static final int index_rect=0x7f020099;
-        public static final int index_start=0x7f02009a;
-        public static final int index_start_sel=0x7f02009b;
-        public static final int index_title=0x7f02009c;
-        public static final int item4_banner=0x7f02009d;
-        public static final int item_element=0x7f02009e;
-        public static final int item_title_bg=0x7f02009f;
-        public static final int pass_next=0x7f0200a0;
-        public static final int pass_next_sel=0x7f0200a1;
-        public static final int pass_share=0x7f0200a2;
-        public static final int pass_share_sel=0x7f0200a3;
-        public static final int play_button_icon=0x7f0200a4;
-        public static final int splash_ht=0x7f0200a5;
-        public static final int word_button_icon=0x7f0200a6;
-        public static final int work_button_icon=0x7f0200a7;
+        public static final int allpass_weichat_button_icon=0x7f020068;
+        public static final int back_button_icon=0x7f020069;
+        public static final int bank_button_icon=0x7f02006a;
+        public static final int base_title_off=0x7f02006b;
+        public static final int base_title_on=0x7f02006c;
+        public static final int bookstack_new=0x7f02006d;
+        public static final int buytip_bg=0x7f02006e;
+        public static final int buytip_cancel=0x7f02006f;
+        public static final int buytip_cancel_sel=0x7f020070;
+        public static final int buytip_ok=0x7f020071;
+        public static final int buytip_ok_sel=0x7f020072;
+        public static final int cancel_button_icon=0x7f020073;
+        public static final int coin_button_icon=0x7f020074;
+        public static final int credit_content=0x7f020075;
+        public static final int delete_button_icon=0x7f020076;
+        public static final int game_buy1=0x7f020077;
+        public static final int game_buy1_sel=0x7f020078;
+        public static final int game_buy2=0x7f020079;
+        public static final int game_buy2_sel=0x7f02007a;
+        public static final int game_center=0x7f02007b;
+        public static final int game_coin=0x7f02007c;
+        public static final int game_coin_icon=0x7f02007d;
+        public static final int game_coin_sel=0x7f02007e;
+        public static final int game_disc=0x7f02007f;
+        public static final int game_disc_light=0x7f020080;
+        public static final int game_level=0x7f020081;
+        public static final int game_level_title=0x7f020082;
+        public static final int game_line=0x7f020083;
+        public static final int game_pin=0x7f020084;
+        public static final int game_share=0x7f020085;
+        public static final int game_share_sel=0x7f020086;
+        public static final int game_title=0x7f020087;
+        public static final int game_word0=0x7f020088;
+        public static final int game_word1=0x7f020089;
+        public static final int game_wordblank=0x7f02008a;
+        public static final int game_wx_text=0x7f02008b;
+        public static final int ic_launcher=0x7f02008c;
+        public static final int index_about=0x7f02008d;
+        public static final int index_about_sel=0x7f02008e;
+        public static final int index_background=0x7f02008f;
+        public static final int index_bar=0x7f020090;
+        public static final int index_between=0x7f020091;
+        public static final int index_bottom_caitu=0x7f020092;
+        public static final int index_bottom_caitu_sel=0x7f020093;
+        public static final int index_btn=0x7f020094;
+        public static final int index_btn_sel=0x7f020095;
+        public static final int index_dash=0x7f020096;
+        public static final int index_footer=0x7f020097;
+        public static final int index_guess=0x7f020098;
+        public static final int index_guess_sel=0x7f020099;
+        public static final int index_medal=0x7f02009a;
+        public static final int index_pin=0x7f02009b;
+        public static final int index_rect=0x7f02009c;
+        public static final int index_start=0x7f02009d;
+        public static final int index_start_sel=0x7f02009e;
+        public static final int index_title=0x7f02009f;
+        public static final int item4_banner=0x7f0200a0;
+        public static final int item_element=0x7f0200a1;
+        public static final int item_title_bg=0x7f0200a2;
+        public static final int next_button_icon=0x7f0200a3;
+        public static final int ok_button_icon=0x7f0200a4;
+        public static final int pass_next=0x7f0200a5;
+        public static final int pass_next_sel=0x7f0200a6;
+        public static final int pass_share=0x7f0200a7;
+        public static final int pass_share_sel=0x7f0200a8;
+        public static final int play_button_icon=0x7f0200a9;
+        public static final int share_button_icon=0x7f0200aa;
+        public static final int splash_ht=0x7f0200ab;
+        public static final int tip_button_icon=0x7f0200ac;
+        public static final int weixin_button_icon=0x7f0200ad;
+        public static final int word_button_icon=0x7f0200ae;
+        public static final int work_button_icon=0x7f0200af;
     }
     public static final class id {
         public static final int action_bar=0x7f05001a;
@@ -1079,13 +1087,19 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f05002f;
         public static final int action_mode_bar_stub=0x7f05002e;
         public static final int action_mode_close_button=0x7f050022;
-        public static final int action_settings=0x7f05004f;
+        public static final int action_settings=0x7f05005c;
         public static final int activity_chooser_view_content=0x7f050023;
         public static final int always=0x7f05000b;
         public static final int beginning=0x7f050011;
-        public static final int btn_bar_add_coins=0x7f05004d;
-        public static final int btn_bar_back=0x7f05004b;
-        public static final int btn_play_start=0x7f050048;
+        public static final int btn_bar_add_coins=0x7f05005a;
+        public static final int btn_bar_back=0x7f050058;
+        public static final int btn_delete_word=0x7f05004e;
+        public static final int btn_dialog_cancel=0x7f05004b;
+        public static final int btn_dialog_ok=0x7f05004c;
+        public static final int btn_next=0x7f050047;
+        public static final int btn_play_start=0x7f050055;
+        public static final int btn_share=0x7f050048;
+        public static final int btn_tip_answer=0x7f05004f;
         public static final int checkbox=0x7f05002b;
         public static final int collapseActionView=0x7f05000d;
         public static final int default_activity_button=0x7f050026;
@@ -1096,17 +1110,18 @@ containing a value of this type.
         public static final int end=0x7f050013;
         public static final int expand_activities_button=0x7f050024;
         public static final int expanded_menu=0x7f05002a;
-        public static final int gridview=0x7f050046;
+        public static final int framelayout1=0x7f05004d;
+        public static final int gridview=0x7f050053;
         public static final int home=0x7f050014;
         public static final int homeAsUp=0x7f050005;
         public static final int icon=0x7f050028;
         public static final int ifRoom=0x7f05000a;
         public static final int image=0x7f050025;
-        public static final int imageView1=0x7f050043;
-        public static final int imageView2=0x7f050049;
-        public static final int item_btn=0x7f05004a;
-        public static final int layout_bar_coin=0x7f05004c;
-        public static final int layout_pan=0x7f050047;
+        public static final int imageView1=0x7f050052;
+        public static final int imageView2=0x7f050056;
+        public static final int item_btn=0x7f050057;
+        public static final int layout_bar_coin=0x7f050059;
+        public static final int layout_pan=0x7f050054;
         public static final int left_icon=0x7f050031;
         public static final int listMode=0x7f050001;
         public static final int list_item=0x7f050027;
@@ -1137,15 +1152,21 @@ containing a value of this type.
         public static final int split_action_bar=0x7f05001c;
         public static final int submit_area=0x7f05003f;
         public static final int tabMode=0x7f050002;
-        public static final int textView1=0x7f050044;
+        public static final int textView1=0x7f050049;
+        public static final int textView5=0x7f050046;
+        public static final int text_current_song_name_pass=0x7f050045;
+        public static final int text_current_stage=0x7f050050;
+        public static final int text_current_stage_pass=0x7f050044;
+        public static final int text_dialog_message=0x7f05004a;
         public static final int title=0x7f050029;
         public static final int title_container=0x7f050030;
         public static final int top_action_bar=0x7f05001e;
-        public static final int txt_bar_coins=0x7f05004e;
+        public static final int txt_bar_coins=0x7f05005b;
+        public static final int txt_main_achievement=0x7f050043;
         public static final int up=0x7f05001f;
         public static final int useLogo=0x7f050003;
         public static final int withText=0x7f05000c;
-        public static final int word_select_container=0x7f050045;
+        public static final int word_select_container=0x7f050051;
     }
     public static final class integer {
         /**  The maximum number of action buttons that should be permitted within
@@ -1171,6 +1192,9 @@ containing a value of this type.
          showAsAction="ifRoom" items can fit. "always" items can override this. 
          */
         public static final int abc_max_action_buttons=0x7f090000;
+        public static final int get_passevent_word=0x7f090003;
+        public static final int pay_delete_word=0x7f090002;
+        public static final int pay_tip_answer=0x7f090001;
     }
     public static final class layout {
         public static final int abc_action_bar_decor=0x7f030000;
@@ -1198,13 +1222,15 @@ containing a value of this type.
         public static final int abc_search_dropdown_item_icons_2line=0x7f030016;
         public static final int abc_search_view=0x7f030017;
         public static final int activity_main=0x7f030018;
-        public static final int answer_right=0x7f030019;
-        public static final int float_buttons=0x7f03001a;
-        public static final int name_select=0x7f03001b;
-        public static final int pan_layout=0x7f03001c;
-        public static final int self_ui_gridview_item=0x7f03001d;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001e;
-        public static final int top_bar=0x7f03001f;
+        public static final int all_pass_view=0x7f030019;
+        public static final int answer_right=0x7f03001a;
+        public static final int dialog_view=0x7f03001b;
+        public static final int float_buttons=0x7f03001c;
+        public static final int name_select=0x7f03001d;
+        public static final int pan_layout=0x7f03001e;
+        public static final int self_ui_gridview_item=0x7f03001f;
+        public static final int support_simple_spinner_dropdown_item=0x7f030020;
+        public static final int top_bar=0x7f030021;
     }
     public static final class menu {
         public static final int main=0x7f0c0000;
@@ -1258,11 +1284,13 @@ containing a value of this type.
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
     
 
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
+
         
 
         Base application theme for API 11+. This theme completely replaces
@@ -1374,6 +1402,7 @@ containing a value of this type.
         /**  Base platform-dependent theme providing a light-themed activity. 
          */
         public static final int Theme_Base_Light=0x7f0b0079;
+        public static final int Theme_Transparent=0x7f0b0081;
         /**  Styles in here can be extended for customisation in your application. Each utilises
          one of the Base styles. If Holo themes are available on the current platform version
          they will be used instead of the compat styles. 
@@ -1479,26 +1508,26 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActionBar_background com.example.imoocmusic.ui:background}</code></td><td> Specifies a background drawable for the action bar.</td></tr>
-           <tr><td><code>{@link #ActionBar_backgroundSplit com.example.imoocmusic.ui:backgroundSplit}</code></td><td> Specifies a background drawable for the bottom component of a split action bar.</td></tr>
-           <tr><td><code>{@link #ActionBar_backgroundStacked com.example.imoocmusic.ui:backgroundStacked}</code></td><td> Specifies a background drawable for a second stacked row of the action bar.</td></tr>
-           <tr><td><code>{@link #ActionBar_customNavigationLayout com.example.imoocmusic.ui:customNavigationLayout}</code></td><td> Specifies a layout for custom navigation.</td></tr>
-           <tr><td><code>{@link #ActionBar_displayOptions com.example.imoocmusic.ui:displayOptions}</code></td><td> Options affecting how the action bar is displayed.</td></tr>
-           <tr><td><code>{@link #ActionBar_divider com.example.imoocmusic.ui:divider}</code></td><td> Specifies the drawable used for item dividers.</td></tr>
-           <tr><td><code>{@link #ActionBar_height com.example.imoocmusic.ui:height}</code></td><td> Specifies a fixed height.</td></tr>
-           <tr><td><code>{@link #ActionBar_homeLayout com.example.imoocmusic.ui:homeLayout}</code></td><td> Specifies a layout to use for the "home" section of the action bar.</td></tr>
-           <tr><td><code>{@link #ActionBar_icon com.example.imoocmusic.ui:icon}</code></td><td> Specifies the drawable used for the application icon.</td></tr>
-           <tr><td><code>{@link #ActionBar_indeterminateProgressStyle com.example.imoocmusic.ui:indeterminateProgressStyle}</code></td><td> Specifies a style resource to use for an indeterminate progress spinner.</td></tr>
-           <tr><td><code>{@link #ActionBar_itemPadding com.example.imoocmusic.ui:itemPadding}</code></td><td> Specifies padding that should be applied to the left and right sides of
+           <tr><td><code>{@link #ActionBar_background com.example.imoocmusic:background}</code></td><td> Specifies a background drawable for the action bar.</td></tr>
+           <tr><td><code>{@link #ActionBar_backgroundSplit com.example.imoocmusic:backgroundSplit}</code></td><td> Specifies a background drawable for the bottom component of a split action bar.</td></tr>
+           <tr><td><code>{@link #ActionBar_backgroundStacked com.example.imoocmusic:backgroundStacked}</code></td><td> Specifies a background drawable for a second stacked row of the action bar.</td></tr>
+           <tr><td><code>{@link #ActionBar_customNavigationLayout com.example.imoocmusic:customNavigationLayout}</code></td><td> Specifies a layout for custom navigation.</td></tr>
+           <tr><td><code>{@link #ActionBar_displayOptions com.example.imoocmusic:displayOptions}</code></td><td> Options affecting how the action bar is displayed.</td></tr>
+           <tr><td><code>{@link #ActionBar_divider com.example.imoocmusic:divider}</code></td><td> Specifies the drawable used for item dividers.</td></tr>
+           <tr><td><code>{@link #ActionBar_height com.example.imoocmusic:height}</code></td><td> Specifies a fixed height.</td></tr>
+           <tr><td><code>{@link #ActionBar_homeLayout com.example.imoocmusic:homeLayout}</code></td><td> Specifies a layout to use for the "home" section of the action bar.</td></tr>
+           <tr><td><code>{@link #ActionBar_icon com.example.imoocmusic:icon}</code></td><td> Specifies the drawable used for the application icon.</td></tr>
+           <tr><td><code>{@link #ActionBar_indeterminateProgressStyle com.example.imoocmusic:indeterminateProgressStyle}</code></td><td> Specifies a style resource to use for an indeterminate progress spinner.</td></tr>
+           <tr><td><code>{@link #ActionBar_itemPadding com.example.imoocmusic:itemPadding}</code></td><td> Specifies padding that should be applied to the left and right sides of
              system-provided items in the bar.</td></tr>
-           <tr><td><code>{@link #ActionBar_logo com.example.imoocmusic.ui:logo}</code></td><td> Specifies the drawable used for the application logo.</td></tr>
-           <tr><td><code>{@link #ActionBar_navigationMode com.example.imoocmusic.ui:navigationMode}</code></td><td> The type of navigation to use.</td></tr>
-           <tr><td><code>{@link #ActionBar_progressBarPadding com.example.imoocmusic.ui:progressBarPadding}</code></td><td> Specifies the horizontal padding on either end for an embedded progress bar.</td></tr>
-           <tr><td><code>{@link #ActionBar_progressBarStyle com.example.imoocmusic.ui:progressBarStyle}</code></td><td> Specifies a style resource to use for an embedded progress bar.</td></tr>
-           <tr><td><code>{@link #ActionBar_subtitle com.example.imoocmusic.ui:subtitle}</code></td><td> Specifies subtitle text used for navigationMode="normal" </td></tr>
-           <tr><td><code>{@link #ActionBar_subtitleTextStyle com.example.imoocmusic.ui:subtitleTextStyle}</code></td><td> Specifies a style to use for subtitle text.</td></tr>
-           <tr><td><code>{@link #ActionBar_title com.example.imoocmusic.ui:title}</code></td><td> Specifies title text used for navigationMode="normal" </td></tr>
-           <tr><td><code>{@link #ActionBar_titleTextStyle com.example.imoocmusic.ui:titleTextStyle}</code></td><td> Specifies a style to use for title text.</td></tr>
+           <tr><td><code>{@link #ActionBar_logo com.example.imoocmusic:logo}</code></td><td> Specifies the drawable used for the application logo.</td></tr>
+           <tr><td><code>{@link #ActionBar_navigationMode com.example.imoocmusic:navigationMode}</code></td><td> The type of navigation to use.</td></tr>
+           <tr><td><code>{@link #ActionBar_progressBarPadding com.example.imoocmusic:progressBarPadding}</code></td><td> Specifies the horizontal padding on either end for an embedded progress bar.</td></tr>
+           <tr><td><code>{@link #ActionBar_progressBarStyle com.example.imoocmusic:progressBarStyle}</code></td><td> Specifies a style resource to use for an embedded progress bar.</td></tr>
+           <tr><td><code>{@link #ActionBar_subtitle com.example.imoocmusic:subtitle}</code></td><td> Specifies subtitle text used for navigationMode="normal" </td></tr>
+           <tr><td><code>{@link #ActionBar_subtitleTextStyle com.example.imoocmusic:subtitleTextStyle}</code></td><td> Specifies a style to use for subtitle text.</td></tr>
+           <tr><td><code>{@link #ActionBar_title com.example.imoocmusic:title}</code></td><td> Specifies title text used for navigationMode="normal" </td></tr>
+           <tr><td><code>{@link #ActionBar_titleTextStyle com.example.imoocmusic:titleTextStyle}</code></td><td> Specifies a style to use for title text.</td></tr>
            </table>
            @see #ActionBar_background
            @see #ActionBar_backgroundSplit
@@ -1536,7 +1565,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:background
+          @attr name com.example.imoocmusic:background
         */
         public static final int ActionBar_background = 10;
         /**
@@ -1550,7 +1579,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:backgroundSplit
+          @attr name com.example.imoocmusic:backgroundSplit
         */
         public static final int ActionBar_backgroundSplit = 12;
         /**
@@ -1564,7 +1593,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:backgroundStacked
+          @attr name com.example.imoocmusic:backgroundStacked
         */
         public static final int ActionBar_backgroundStacked = 11;
         /**
@@ -1576,7 +1605,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:customNavigationLayout
+          @attr name com.example.imoocmusic:customNavigationLayout
         */
         public static final int ActionBar_customNavigationLayout = 13;
         /**
@@ -1599,7 +1628,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>disableHome</code></td><td>0x20</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:displayOptions
+          @attr name com.example.imoocmusic:displayOptions
         */
         public static final int ActionBar_displayOptions = 3;
         /**
@@ -1611,7 +1640,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:divider
+          @attr name com.example.imoocmusic:divider
         */
         public static final int ActionBar_divider = 9;
         /**
@@ -1629,7 +1658,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:height
+          @attr name com.example.imoocmusic:height
         */
         public static final int ActionBar_height = 1;
         /**
@@ -1641,7 +1670,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:homeLayout
+          @attr name com.example.imoocmusic:homeLayout
         */
         public static final int ActionBar_homeLayout = 14;
         /**
@@ -1653,7 +1682,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:icon
+          @attr name com.example.imoocmusic:icon
         */
         public static final int ActionBar_icon = 7;
         /**
@@ -1665,7 +1694,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:indeterminateProgressStyle
+          @attr name com.example.imoocmusic:indeterminateProgressStyle
         */
         public static final int ActionBar_indeterminateProgressStyle = 16;
         /**
@@ -1684,7 +1713,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:itemPadding
+          @attr name com.example.imoocmusic:itemPadding
         */
         public static final int ActionBar_itemPadding = 18;
         /**
@@ -1696,7 +1725,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:logo
+          @attr name com.example.imoocmusic:logo
         */
         public static final int ActionBar_logo = 8;
         /**
@@ -1716,7 +1745,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>tabMode</code></td><td>2</td><td> The action bar will use a series of horizontal tabs for navigation. </td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:navigationMode
+          @attr name com.example.imoocmusic:navigationMode
         */
         public static final int ActionBar_navigationMode = 2;
         /**
@@ -1734,7 +1763,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:progressBarPadding
+          @attr name com.example.imoocmusic:progressBarPadding
         */
         public static final int ActionBar_progressBarPadding = 17;
         /**
@@ -1746,7 +1775,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:progressBarStyle
+          @attr name com.example.imoocmusic:progressBarStyle
         */
         public static final int ActionBar_progressBarStyle = 15;
         /**
@@ -1762,7 +1791,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:subtitle
+          @attr name com.example.imoocmusic:subtitle
         */
         public static final int ActionBar_subtitle = 4;
         /**
@@ -1774,7 +1803,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:subtitleTextStyle
+          @attr name com.example.imoocmusic:subtitleTextStyle
         */
         public static final int ActionBar_subtitleTextStyle = 6;
         /**
@@ -1790,7 +1819,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:title
+          @attr name com.example.imoocmusic:title
         */
         public static final int ActionBar_title = 0;
         /**
@@ -1802,7 +1831,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:titleTextStyle
+          @attr name com.example.imoocmusic:titleTextStyle
         */
         public static final int ActionBar_titleTextStyle = 5;
         /**  Valid LayoutParams for views placed in the action bar as custom views. 
@@ -1833,9 +1862,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActionBarWindow_windowActionBar com.example.imoocmusic.ui:windowActionBar}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBarWindow_windowActionBarOverlay com.example.imoocmusic.ui:windowActionBarOverlay}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBarWindow_windowSplitActionBar com.example.imoocmusic.ui:windowSplitActionBar}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBarWindow_windowActionBar com.example.imoocmusic:windowActionBar}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBarWindow_windowActionBarOverlay com.example.imoocmusic:windowActionBarOverlay}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBarWindow_windowSplitActionBar com.example.imoocmusic:windowSplitActionBar}</code></td><td></td></tr>
            </table>
            @see #ActionBarWindow_windowActionBar
            @see #ActionBarWindow_windowActionBarOverlay
@@ -1845,7 +1874,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f010000, 0x7f010001, 0x7f010002
         };
         /**
-          <p>This symbol is the offset where the {@link com.example.imoocmusic.ui.R.attr#windowActionBar}
+          <p>This symbol is the offset where the {@link com.example.imoocmusic.R.attr#windowActionBar}
           attribute's value can be found in the {@link #ActionBarWindow} array.
 
 
@@ -1855,11 +1884,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.imoocmusic.ui:windowActionBar
+          @attr name com.example.imoocmusic:windowActionBar
         */
         public static final int ActionBarWindow_windowActionBar = 0;
         /**
-          <p>This symbol is the offset where the {@link com.example.imoocmusic.ui.R.attr#windowActionBarOverlay}
+          <p>This symbol is the offset where the {@link com.example.imoocmusic.R.attr#windowActionBarOverlay}
           attribute's value can be found in the {@link #ActionBarWindow} array.
 
 
@@ -1869,11 +1898,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.imoocmusic.ui:windowActionBarOverlay
+          @attr name com.example.imoocmusic:windowActionBarOverlay
         */
         public static final int ActionBarWindow_windowActionBarOverlay = 1;
         /**
-          <p>This symbol is the offset where the {@link com.example.imoocmusic.ui.R.attr#windowSplitActionBar}
+          <p>This symbol is the offset where the {@link com.example.imoocmusic.R.attr#windowSplitActionBar}
           attribute's value can be found in the {@link #ActionBarWindow} array.
 
 
@@ -1883,7 +1912,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.imoocmusic.ui:windowSplitActionBar
+          @attr name com.example.imoocmusic:windowSplitActionBar
         */
         public static final int ActionBarWindow_windowSplitActionBar = 2;
         /** Attributes that can be used with a ActionMenuItemView.
@@ -1916,11 +1945,11 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActionMode_background com.example.imoocmusic.ui:background}</code></td><td> Specifies a background for the action mode bar.</td></tr>
-           <tr><td><code>{@link #ActionMode_backgroundSplit com.example.imoocmusic.ui:backgroundSplit}</code></td><td> Specifies a background for the split action mode bar.</td></tr>
-           <tr><td><code>{@link #ActionMode_height com.example.imoocmusic.ui:height}</code></td><td> Specifies a fixed height for the action mode bar.</td></tr>
-           <tr><td><code>{@link #ActionMode_subtitleTextStyle com.example.imoocmusic.ui:subtitleTextStyle}</code></td><td> Specifies a style to use for subtitle text.</td></tr>
-           <tr><td><code>{@link #ActionMode_titleTextStyle com.example.imoocmusic.ui:titleTextStyle}</code></td><td> Specifies a style to use for title text.</td></tr>
+           <tr><td><code>{@link #ActionMode_background com.example.imoocmusic:background}</code></td><td> Specifies a background for the action mode bar.</td></tr>
+           <tr><td><code>{@link #ActionMode_backgroundSplit com.example.imoocmusic:backgroundSplit}</code></td><td> Specifies a background for the split action mode bar.</td></tr>
+           <tr><td><code>{@link #ActionMode_height com.example.imoocmusic:height}</code></td><td> Specifies a fixed height for the action mode bar.</td></tr>
+           <tr><td><code>{@link #ActionMode_subtitleTextStyle com.example.imoocmusic:subtitleTextStyle}</code></td><td> Specifies a style to use for subtitle text.</td></tr>
+           <tr><td><code>{@link #ActionMode_titleTextStyle com.example.imoocmusic:titleTextStyle}</code></td><td> Specifies a style to use for title text.</td></tr>
            </table>
            @see #ActionMode_background
            @see #ActionMode_backgroundSplit
@@ -1941,7 +1970,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:background
+          @attr name com.example.imoocmusic:background
         */
         public static final int ActionMode_background = 3;
         /**
@@ -1955,7 +1984,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:backgroundSplit
+          @attr name com.example.imoocmusic:backgroundSplit
         */
         public static final int ActionMode_backgroundSplit = 4;
         /**
@@ -1973,7 +2002,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:height
+          @attr name com.example.imoocmusic:height
         */
         public static final int ActionMode_height = 0;
         /**
@@ -1985,7 +2014,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:subtitleTextStyle
+          @attr name com.example.imoocmusic:subtitleTextStyle
         */
         public static final int ActionMode_subtitleTextStyle = 2;
         /**
@@ -1997,7 +2026,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:titleTextStyle
+          @attr name com.example.imoocmusic:titleTextStyle
         */
         public static final int ActionMode_titleTextStyle = 1;
         /**  Attrbitutes for a ActivityChooserView. 
@@ -2006,8 +2035,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActivityChooserView_expandActivityOverflowButtonDrawable com.example.imoocmusic.ui:expandActivityOverflowButtonDrawable}</code></td><td> The drawable to show in the button for expanding the activities overflow popup.</td></tr>
-           <tr><td><code>{@link #ActivityChooserView_initialActivityCount com.example.imoocmusic.ui:initialActivityCount}</code></td><td> The maximal number of items initially shown in the activity list.</td></tr>
+           <tr><td><code>{@link #ActivityChooserView_expandActivityOverflowButtonDrawable com.example.imoocmusic:expandActivityOverflowButtonDrawable}</code></td><td> The drawable to show in the button for expanding the activities overflow popup.</td></tr>
+           <tr><td><code>{@link #ActivityChooserView_initialActivityCount com.example.imoocmusic:initialActivityCount}</code></td><td> The maximal number of items initially shown in the activity list.</td></tr>
            </table>
            @see #ActivityChooserView_expandActivityOverflowButtonDrawable
            @see #ActivityChooserView_initialActivityCount
@@ -2029,7 +2058,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:expandActivityOverflowButtonDrawable
+          @attr name com.example.imoocmusic:expandActivityOverflowButtonDrawable
         */
         public static final int ActivityChooserView_expandActivityOverflowButtonDrawable = 1;
         /**
@@ -2045,7 +2074,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:initialActivityCount
+          @attr name com.example.imoocmusic:initialActivityCount
         */
         public static final int ActivityChooserView_initialActivityCount = 0;
         /** Attributes that can be used with a CompatTextView.
@@ -2054,7 +2083,7 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #CompatTextView_textAllCaps com.example.imoocmusic.ui:textAllCaps}</code></td><td> Present the text in ALL CAPS.</td></tr>
+           <tr><td><code>{@link #CompatTextView_textAllCaps com.example.imoocmusic:textAllCaps}</code></td><td> Present the text in ALL CAPS.</td></tr>
            </table>
            @see #CompatTextView_textAllCaps
          */
@@ -2071,7 +2100,7 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:textAllCaps
+          @attr name com.example.imoocmusic:textAllCaps
         */
         public static final int CompatTextView_textAllCaps = 0;
         /** Attributes that can be used with a LinearLayoutICS.
@@ -2080,9 +2109,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #LinearLayoutICS_divider com.example.imoocmusic.ui:divider}</code></td><td> Drawable to use as a vertical divider between buttons.</td></tr>
-           <tr><td><code>{@link #LinearLayoutICS_dividerPadding com.example.imoocmusic.ui:dividerPadding}</code></td><td> Size of padding on either end of a divider.</td></tr>
-           <tr><td><code>{@link #LinearLayoutICS_showDividers com.example.imoocmusic.ui:showDividers}</code></td><td> Setting for which dividers to show.</td></tr>
+           <tr><td><code>{@link #LinearLayoutICS_divider com.example.imoocmusic:divider}</code></td><td> Drawable to use as a vertical divider between buttons.</td></tr>
+           <tr><td><code>{@link #LinearLayoutICS_dividerPadding com.example.imoocmusic:dividerPadding}</code></td><td> Size of padding on either end of a divider.</td></tr>
+           <tr><td><code>{@link #LinearLayoutICS_showDividers com.example.imoocmusic:showDividers}</code></td><td> Setting for which dividers to show.</td></tr>
            </table>
            @see #LinearLayoutICS_divider
            @see #LinearLayoutICS_dividerPadding
@@ -2100,7 +2129,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:divider
+          @attr name com.example.imoocmusic:divider
         */
         public static final int LinearLayoutICS_divider = 0;
         /**
@@ -2118,7 +2147,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:dividerPadding
+          @attr name com.example.imoocmusic:dividerPadding
         */
         public static final int LinearLayoutICS_dividerPadding = 2;
         /**
@@ -2139,7 +2168,7 @@ containing a value of this type.
 <tr><td><code>end</code></td><td>4</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:showDividers
+          @attr name com.example.imoocmusic:showDividers
         */
         public static final int LinearLayoutICS_showDividers = 1;
         /**  Base attributes that are available to all groups. 
@@ -2228,10 +2257,10 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #MenuItem_actionLayout com.example.imoocmusic.ui:actionLayout}</code></td><td> An optional layout to be used as an action view.</td></tr>
-           <tr><td><code>{@link #MenuItem_actionProviderClass com.example.imoocmusic.ui:actionProviderClass}</code></td><td> The name of an optional ActionProvider class to instantiate an action view
+           <tr><td><code>{@link #MenuItem_actionLayout com.example.imoocmusic:actionLayout}</code></td><td> An optional layout to be used as an action view.</td></tr>
+           <tr><td><code>{@link #MenuItem_actionProviderClass com.example.imoocmusic:actionProviderClass}</code></td><td> The name of an optional ActionProvider class to instantiate an action view
              and perform operations such as default action for that menu item.</td></tr>
-           <tr><td><code>{@link #MenuItem_actionViewClass com.example.imoocmusic.ui:actionViewClass}</code></td><td> The name of an optional View class to instantiate and use as an
+           <tr><td><code>{@link #MenuItem_actionViewClass com.example.imoocmusic:actionViewClass}</code></td><td> The name of an optional View class to instantiate and use as an
              action view.</td></tr>
            <tr><td><code>{@link #MenuItem_android_alphabeticShortcut android:alphabeticShortcut}</code></td><td> The alphabetic shortcut key.</td></tr>
            <tr><td><code>{@link #MenuItem_android_checkable android:checkable}</code></td><td> Whether the item is capable of displaying a check mark.</td></tr>
@@ -2247,7 +2276,7 @@ containing a value of this type.
            <tr><td><code>{@link #MenuItem_android_title android:title}</code></td><td> The title associated with the item.</td></tr>
            <tr><td><code>{@link #MenuItem_android_titleCondensed android:titleCondensed}</code></td><td> The condensed title associated with the item.</td></tr>
            <tr><td><code>{@link #MenuItem_android_visible android:visible}</code></td><td> Whether the item is shown/visible.</td></tr>
-           <tr><td><code>{@link #MenuItem_showAsAction com.example.imoocmusic.ui:showAsAction}</code></td><td> How this item should display in the Action Bar, if present.</td></tr>
+           <tr><td><code>{@link #MenuItem_showAsAction com.example.imoocmusic:showAsAction}</code></td><td> How this item should display in the Action Bar, if present.</td></tr>
            </table>
            @see #MenuItem_actionLayout
            @see #MenuItem_actionProviderClass
@@ -2285,7 +2314,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:actionLayout
+          @attr name com.example.imoocmusic:actionLayout
         */
         public static final int MenuItem_actionLayout = 14;
         /**
@@ -2304,7 +2333,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:actionProviderClass
+          @attr name com.example.imoocmusic:actionProviderClass
         */
         public static final int MenuItem_actionProviderClass = 16;
         /**
@@ -2322,7 +2351,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:actionViewClass
+          @attr name com.example.imoocmusic:actionViewClass
         */
         public static final int MenuItem_actionViewClass = 15;
         /**
@@ -2478,7 +2507,7 @@ containing a value of this type.
                  larger segment of its container. </td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:showAsAction
+          @attr name com.example.imoocmusic:showAsAction
         */
         public static final int MenuItem_showAsAction = 13;
         /** Attributes that can be used with a MenuView.
@@ -2589,8 +2618,8 @@ containing a value of this type.
            <tr><td><code>{@link #SearchView_android_imeOptions android:imeOptions}</code></td><td> The IME options to set on the query text field.</td></tr>
            <tr><td><code>{@link #SearchView_android_inputType android:inputType}</code></td><td> The input type to set on the query text field.</td></tr>
            <tr><td><code>{@link #SearchView_android_maxWidth android:maxWidth}</code></td><td> An optional maximum width of the SearchView.</td></tr>
-           <tr><td><code>{@link #SearchView_iconifiedByDefault com.example.imoocmusic.ui:iconifiedByDefault}</code></td><td> The default state of the SearchView.</td></tr>
-           <tr><td><code>{@link #SearchView_queryHint com.example.imoocmusic.ui:queryHint}</code></td><td> An optional query hint string to be displayed in the empty query field.</td></tr>
+           <tr><td><code>{@link #SearchView_iconifiedByDefault com.example.imoocmusic:iconifiedByDefault}</code></td><td> The default state of the SearchView.</td></tr>
+           <tr><td><code>{@link #SearchView_queryHint com.example.imoocmusic:queryHint}</code></td><td> An optional query hint string to be displayed in the empty query field.</td></tr>
            </table>
            @see #SearchView_android_imeOptions
            @see #SearchView_android_inputType
@@ -2643,7 +2672,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:iconifiedByDefault
+          @attr name com.example.imoocmusic:iconifiedByDefault
         */
         public static final int SearchView_iconifiedByDefault = 3;
         /**
@@ -2659,7 +2688,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:queryHint
+          @attr name com.example.imoocmusic:queryHint
         */
         public static final int SearchView_queryHint = 4;
         /** Attributes that can be used with a Spinner.
@@ -2676,12 +2705,12 @@ containing a value of this type.
            <tr><td><code>{@link #Spinner_android_dropDownWidth android:dropDownWidth}</code></td><td> Width of the dropdown in spinnerMode="dropdown".</td></tr>
            <tr><td><code>{@link #Spinner_android_gravity android:gravity}</code></td><td> Gravity setting for positioning the currently selected item.</td></tr>
            <tr><td><code>{@link #Spinner_android_popupBackground android:popupBackground}</code></td><td> Background drawable to use for the dropdown in spinnerMode="dropdown".</td></tr>
-           <tr><td><code>{@link #Spinner_disableChildrenWhenDisabled com.example.imoocmusic.ui:disableChildrenWhenDisabled}</code></td><td> Whether this spinner should mark child views as enabled/disabled when
+           <tr><td><code>{@link #Spinner_disableChildrenWhenDisabled com.example.imoocmusic:disableChildrenWhenDisabled}</code></td><td> Whether this spinner should mark child views as enabled/disabled when
              the spinner itself is enabled/disabled.</td></tr>
-           <tr><td><code>{@link #Spinner_popupPromptView com.example.imoocmusic.ui:popupPromptView}</code></td><td> Reference to a layout to use for displaying a prompt in the dropdown for
+           <tr><td><code>{@link #Spinner_popupPromptView com.example.imoocmusic:popupPromptView}</code></td><td> Reference to a layout to use for displaying a prompt in the dropdown for
              spinnerMode="dropdown".</td></tr>
-           <tr><td><code>{@link #Spinner_prompt com.example.imoocmusic.ui:prompt}</code></td><td> The prompt to display when the spinner's dialog is shown.</td></tr>
-           <tr><td><code>{@link #Spinner_spinnerMode com.example.imoocmusic.ui:spinnerMode}</code></td><td> Display mode for spinner options.</td></tr>
+           <tr><td><code>{@link #Spinner_prompt com.example.imoocmusic:prompt}</code></td><td> The prompt to display when the spinner's dialog is shown.</td></tr>
+           <tr><td><code>{@link #Spinner_spinnerMode com.example.imoocmusic:spinnerMode}</code></td><td> Display mode for spinner options.</td></tr>
            </table>
            @see #Spinner_android_dropDownHorizontalOffset
            @see #Spinner_android_dropDownSelector
@@ -2769,7 +2798,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:disableChildrenWhenDisabled
+          @attr name com.example.imoocmusic:disableChildrenWhenDisabled
         */
         public static final int Spinner_disableChildrenWhenDisabled = 9;
         /**
@@ -2783,7 +2812,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:popupPromptView
+          @attr name com.example.imoocmusic:popupPromptView
         */
         public static final int Spinner_popupPromptView = 8;
         /**
@@ -2795,7 +2824,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:prompt
+          @attr name com.example.imoocmusic:prompt
         */
         public static final int Spinner_prompt = 6;
         /**
@@ -2815,7 +2844,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
                  anchored to the spinner widget itself. </td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:spinnerMode
+          @attr name com.example.imoocmusic:spinnerMode
         */
         public static final int Spinner_spinnerMode = 7;
         /**  These are the standard attributes that make up a complete theme. 
@@ -2824,12 +2853,12 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #Theme_actionDropDownStyle com.example.imoocmusic.ui:actionDropDownStyle}</code></td><td> Default ActionBar dropdown style.</td></tr>
-           <tr><td><code>{@link #Theme_dropdownListPreferredItemHeight com.example.imoocmusic.ui:dropdownListPreferredItemHeight}</code></td><td> The preferred item height for dropdown lists.</td></tr>
-           <tr><td><code>{@link #Theme_listChoiceBackgroundIndicator com.example.imoocmusic.ui:listChoiceBackgroundIndicator}</code></td><td> Drawable used as a background for selected list items.</td></tr>
-           <tr><td><code>{@link #Theme_panelMenuListTheme com.example.imoocmusic.ui:panelMenuListTheme}</code></td><td> Default Panel Menu style.</td></tr>
-           <tr><td><code>{@link #Theme_panelMenuListWidth com.example.imoocmusic.ui:panelMenuListWidth}</code></td><td> Default Panel Menu width.</td></tr>
-           <tr><td><code>{@link #Theme_popupMenuStyle com.example.imoocmusic.ui:popupMenuStyle}</code></td><td> Default PopupMenu style.</td></tr>
+           <tr><td><code>{@link #Theme_actionDropDownStyle com.example.imoocmusic:actionDropDownStyle}</code></td><td> Default ActionBar dropdown style.</td></tr>
+           <tr><td><code>{@link #Theme_dropdownListPreferredItemHeight com.example.imoocmusic:dropdownListPreferredItemHeight}</code></td><td> The preferred item height for dropdown lists.</td></tr>
+           <tr><td><code>{@link #Theme_listChoiceBackgroundIndicator com.example.imoocmusic:listChoiceBackgroundIndicator}</code></td><td> Drawable used as a background for selected list items.</td></tr>
+           <tr><td><code>{@link #Theme_panelMenuListTheme com.example.imoocmusic:panelMenuListTheme}</code></td><td> Default Panel Menu style.</td></tr>
+           <tr><td><code>{@link #Theme_panelMenuListWidth com.example.imoocmusic:panelMenuListWidth}</code></td><td> Default Panel Menu width.</td></tr>
+           <tr><td><code>{@link #Theme_popupMenuStyle com.example.imoocmusic:popupMenuStyle}</code></td><td> Default PopupMenu style.</td></tr>
            </table>
            @see #Theme_actionDropDownStyle
            @see #Theme_dropdownListPreferredItemHeight
@@ -2851,7 +2880,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:actionDropDownStyle
+          @attr name com.example.imoocmusic:actionDropDownStyle
         */
         public static final int Theme_actionDropDownStyle = 0;
         /**
@@ -2869,7 +2898,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:dropdownListPreferredItemHeight
+          @attr name com.example.imoocmusic:dropdownListPreferredItemHeight
         */
         public static final int Theme_dropdownListPreferredItemHeight = 1;
         /**
@@ -2881,7 +2910,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:listChoiceBackgroundIndicator
+          @attr name com.example.imoocmusic:listChoiceBackgroundIndicator
         */
         public static final int Theme_listChoiceBackgroundIndicator = 5;
         /**
@@ -2893,7 +2922,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:panelMenuListTheme
+          @attr name com.example.imoocmusic:panelMenuListTheme
         */
         public static final int Theme_panelMenuListTheme = 4;
         /**
@@ -2911,7 +2940,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:panelMenuListWidth
+          @attr name com.example.imoocmusic:panelMenuListWidth
         */
         public static final int Theme_panelMenuListWidth = 3;
         /**
@@ -2923,7 +2952,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:popupMenuStyle
+          @attr name com.example.imoocmusic:popupMenuStyle
         */
         public static final int Theme_popupMenuStyle = 2;
         /** Attributes that can be used with a View.
@@ -2933,8 +2962,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #View_android_focusable android:focusable}</code></td><td> Boolean that controls whether a view can take focus.</td></tr>
-           <tr><td><code>{@link #View_paddingEnd com.example.imoocmusic.ui:paddingEnd}</code></td><td> Sets the padding, in pixels, of the end edge; see {@link android.R.attr#padding}.</td></tr>
-           <tr><td><code>{@link #View_paddingStart com.example.imoocmusic.ui:paddingStart}</code></td><td> Sets the padding, in pixels, of the start edge; see {@link android.R.attr#padding}.</td></tr>
+           <tr><td><code>{@link #View_paddingEnd com.example.imoocmusic:paddingEnd}</code></td><td> Sets the padding, in pixels, of the end edge; see {@link android.R.attr#padding}.</td></tr>
+           <tr><td><code>{@link #View_paddingStart com.example.imoocmusic:paddingStart}</code></td><td> Sets the padding, in pixels, of the start edge; see {@link android.R.attr#padding}.</td></tr>
            </table>
            @see #View_android_focusable
            @see #View_paddingEnd
@@ -2972,7 +3001,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:paddingEnd
+          @attr name com.example.imoocmusic:paddingEnd
         */
         public static final int View_paddingEnd = 2;
         /**
@@ -2990,7 +3019,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.imoocmusic.ui:paddingStart
+          @attr name com.example.imoocmusic:paddingStart
         */
         public static final int View_paddingStart = 1;
     };

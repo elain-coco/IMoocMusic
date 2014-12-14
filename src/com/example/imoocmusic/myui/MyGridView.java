@@ -14,7 +14,7 @@ import android.widget.GridView;
 
 import com.example.imoocmusic.model.IWordButtonClickListener;
 import com.example.imoocmusic.model.WorkButton;
-import com.example.imoocmusic.ui.R;
+import com.example.imoocmusic.R;
 import com.example.imoocmusic.util.Util;
 
 public class MyGridView extends GridView {
