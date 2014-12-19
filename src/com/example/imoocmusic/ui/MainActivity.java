@@ -20,6 +20,7 @@ import android.view.animation.AnimationUtils;
 import android.view.animation.LinearInterpolator;
 import android.webkit.WebView.FindListener;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -220,6 +221,8 @@ public class MainActivity extends Activity implements IWordButtonClickListener {
 		// 处理提示答案事件
 		handleTipAnswer();
 
+		// 处理案件后退事件
+		handleBackEvent();
 	}
 
 	/**
@@ -271,6 +274,15 @@ public class MainActivity extends Activity implements IWordButtonClickListener {
 	 * 加载当前关的数据
 	 */
 	private void initCurrentStageData() {
+		// 第一关的时候隐藏后退按钮
+		ImageButton backButton = (ImageButton) findViewById(R.id.btn_bar_back);
+		if(mCurrentStageIndex == -1){
+			backButton.setVisibility(View.INVISIBLE);
+		}else {
+			backButton.setVisibility(View.VISIBLE);
+		}
+		
+
 		// 读取当前歌曲信息
 		mCurrentSong = loadStageSongInfo(++mCurrentStageIndex);
 
@@ -488,7 +500,7 @@ public class MainActivity extends Activity implements IWordButtonClickListener {
 	private void handlePassEvent() {
 		// 增加用户的金币数量
 		handleCoins(getPassEventCoins());
-		
+
 		// 显示过关界面
 		mPassView = (LinearLayout) this.findViewById(R.id.pass_view);// 初始化
 		mPassView.setVisibility(View.VISIBLE);// 设置为可见
@@ -529,6 +541,34 @@ public class MainActivity extends Activity implements IWordButtonClickListener {
 					// 进入下一关
 					mPassView.setVisibility(View.GONE);// 隐藏过关界面
 					// 加载关卡数据
+					initCurrentStageData();
+				}
+			}
+		});
+	}
+
+	/**
+	 * 处理后退按钮点击事件
+	 */
+	private void handleBackEvent() {
+		ImageButton backButton = (ImageButton) findViewById(R.id.btn_bar_back);
+		// 设置点击事件
+		backButton.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				MyLog.d(TAG, "当前关卡数：" + mCurrentStageIndex);
+				if (mCurrentStageIndex > 0) {
+					// 减少当前关卡数
+					mCurrentStageIndex -=2;
+					// 保存游戏数据
+					Util.saveData(MainActivity.this, mCurrentStageIndex - 1,
+							mCurrentCoins);
+
+					// 减少金币
+					handleCoins(-getPassEventCoins());
+					// 重新加载关卡
 					initCurrentStageData();
 				}
 			}
@@ -748,16 +788,16 @@ public class MainActivity extends Activity implements IWordButtonClickListener {
 	private int getTipCoins() {
 		return this.getResources().getInteger(R.integer.pay_tip_answer);
 	}
-	
 
 	/**
 	 * 从配置文件里面读取过关操作用的金币
 	 * 
 	 * @return
 	 */
-	private int getPassEventCoins(){
+	private int getPassEventCoins() {
 		return this.getResources().getInteger(R.integer.get_passevent_word);
 	}
+
 	/**
 	 * 处理删除待文字事件
 	 */
